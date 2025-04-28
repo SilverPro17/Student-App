@@ -26,3 +26,71 @@ Este projeto é uma aplicação simples de gerenciamento de estudantes utilizand
    ```bash
    git clone https://github.com/seu-usuario/nome-do-repositorio.git
     ```
+
+2. Acesse a pasta do projeto:
+   ```bash
+   cd nome-do-repositorio
+    ```
+3. Instale as dependências:
+   ```bash
+   npm install
+    ```
+4. Inicie o servidor de desenvolvimento:
+      ```bash
+   npm run dev
+    ```
+5. Acesse a aplicação no navegador. Geralmente estará disponível em:
+      ```bash
+   http://localhost:5173
+    ```
+## Estrutura do Código
+### App.js
+A aplicação é composta por um único componente funcional, App, que gerencia a lista de estudantes e as interações do usuário.
+
+- Estado (useState):
+
+   - students: Armazena a lista de estudantes.
+   
+   - searchTerm: Controla o texto inserido no campo de pesquisa.
+   
+   - newStudentName: Controla o nome do novo estudante a ser adicionado.
+
+- Efeitos (useEffect):
+
+   - Carregar estudantes: Ao carregar o componente pela primeira vez, os dados dos estudantes são carregados do localStorage.
+   
+   - Salvar estudantes: Sempre que a lista de estudantes for atualizada, os dados são salvos no localStorage.
+
+### Funções:
+   - addStudent: Adiciona um novo estudante à lista, gerando um ID único com o timestamp atual e atribuindo uma imagem padrão.
+
+   - removeStudent: Remove um estudante da lista com base no ID.
+
+   - editStudent: Permite editar o nome de um estudante, solicitando ao usuário um novo nome através de um prompt.
+
+   - filteredStudents: Filtra a lista de estudantes com base no texto inserido no campo de pesquisa.
+
+### index.css
+Este arquivo contém as regras de estilo para a aplicação. Ele usa Tailwind CSS, um framework CSS utilitário, para facilitar a estilização.
+
+O código está configurado para aplicar estilos em elementos como botões, inputs, listas e imagens de estudantes.
+
+## Como Contribuir
+1. Faça um fork do projeto.
+
+2. Crie uma branch para suas alterações:
+   ```bash
+   git checkout -b minha-branch
+    ```
+3. Faça as alterações e commit:
+   ```bash
+   git commit -m "Descrição das mudanças"
+    ```
+4. Faça o push para sua branch:
+   ```bash
+   git push origin minha-branch
+    ```
+5. Envie um Pull Request para o repositório principal.
+
+# Licença
+Este projeto é de código aberto sob a licença MIT.
